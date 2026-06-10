@@ -1,0 +1,17 @@
+{
+  "name": "owasp-lab",
+  "version": "1.0.0",
+  "description": "Mini-laboratório OWASP Top 10 — fins educacionais",
+  "main": "vulnerable/app.js",
+  "scripts": {
+    "vulnerable": "node vulnerable/app.js",
+    "secure":     "node secure/app.js",
+    "demo":       "node demo-attacks.js"
+  },
+  "dependencies": {
+    "bcrypt":  "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
